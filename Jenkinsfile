@@ -40,7 +40,7 @@ pipeline {
         stage('Build application image') {
             steps { sh 'docker build -t "$APP_IMAGE" .' }
         }
-        
+
         stage('Image scan - Trivy') {
             steps {
                 sh 'docker save "$APP_IMAGE" -o app-image.tar'
@@ -52,10 +52,9 @@ pipeline {
             }
 
             post {
-                always { sh 'rm -f app-image.tar' } }
+                always { sh 'rm -f app-image.tar' } 
             }
         }
-
     }
     post {
         always {
