@@ -66,7 +66,7 @@ pipeline {
                     docker run -d --name "$APP_CONTAINER" --network "$LAB_NETWORK" "$APP_IMAGE"
                     ready=0
                     for attempt in $(seq 1 30); do
-                        if docker exec "$APP_CONTAINER" python -c "import urllib.request;\			urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"; then
+                        if docker exec "$APP_CONTAINER" python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"; then
                             ready=1
                             break
                         fi
