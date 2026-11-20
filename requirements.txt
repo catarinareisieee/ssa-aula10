@@ -1,4 +1,4 @@
 fastapi==0.115.6
 uvicorn==0.34.0
 # Deliberately vulnerable classroom dependency for SCA.
-requests==2.31.0
+requests==2.33.0
