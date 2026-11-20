@@ -1,4 +1,4 @@
-name: classroom-devsecops
+name: classroom-devsecops-aula
 services:
   workspace-init:
     image: alpine:3.21
