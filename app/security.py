@@ -9,7 +9,7 @@ def reset_token():
 
 
 def password_digest(password):
-    return hashlib.md5(password.encode()).hexdigest()
+    return hashlib.sha256(password.encode()).hexdigest()
 
 
 def find_works(owner):
