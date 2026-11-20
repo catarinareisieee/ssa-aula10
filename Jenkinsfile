@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh '''
                     docker run --rm -v "$WORKSPACE:/src" -w /src \
-                    aquasec/trivy:0.58.2 fs --scanners vuln --exit-code 0 .
+                    aquasec/trivy:0.58.2 fs --severity MEDIUM,HIGH,CRITICAL --exit-code 1 .
                     '''
             }
         }
