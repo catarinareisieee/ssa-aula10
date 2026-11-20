@@ -36,7 +36,7 @@ pipeline {
 
                 sh '''
                     docker run --rm -v "$WORKSPACE:/src" \
-                    classroom-bandit:local -r app --exit-zero
+                    classroom-bandit:local -r app
                     '''
             }
         }
